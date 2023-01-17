@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Menu</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        #header{
+           text-align: center;
+
+        }
+        #logo{
+            width: 80px;
+            height: auto;
+            border-radius: 50%;
+            border-color: black;
+        }
+        #menubar{
+                text-align: center;
+                background-color: aqua;
+        }
+        #menubar li{
+            display: inline-block;
+            padding: 20px 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        h1{
+            text-align: center;
+            margin: 0px;
+        }
+        #container{
+            text-align: center;
+            padding: 50px 100px;
+        }
+        
+        #img{
+            width: 100%;
+        }
+        .sticky{
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="shivam.png" id="logo" alt="">
+        <nav id="menubar">
+          <li>home</li>
+          <li>about us</li>
+          <li>service</li>
+          <li>client</li>
+          <li>contect us</li>
+        </nav>
+    </div>
+    <div id="container">
+        <h1>about us</h1>
+        <img id="img" src="https://cdn.shopify.com/s/files/1/2628/9270/files/mango-2400_cab7a249-532b-46db-b779-5e6fb243b63f.jpg?v=1630140424" alt="">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur et qui autem, ab quia dolor dignissimos est voluptatibus veniam libero dolore voluptate nemo nostrum repellat culpa! Nihil facilis repellendus sapiente aliquam quasi numquam natus consequatur veritatis, reiciendis placeat hic? Quasi amet error corporis saepe magnam cupiditate facilis similique doloribus adipisci veritatis quis qui dolorem nisi sed magni voluptates perspiciatis autem nobis, expedita dignissimos voluptatum. Ipsa eveniet reiciendis quibusdam, quasi totam quia id repellat similique aspernatur, placeat perspiciatis, illo perferendis voluptate voluptatum distinctio ut atque magni sunt labore aut ea voluptates error. Voluptatum, recusandae in? Minus doloribus quo rerum obcaecati illo! Quod aliquid eligendi aliquam corporis fuga unde officiis sequi quos voluptas distinctio, eveniet facilis odit temporibus perspiciatis necessitatibus aut similique inventore! Reprehenderit qui modi voluptas aut quae quaerat ad non dignissimos. Suscipit nostrum laudantium, fugiat nemo, temporibus neque omnis aperiam, repellat pariatur animi cupiditate debitis possimus? Inventore, eos quasi quisquam eum, explicabo cumque quam cupiditate vel deserunt, minima quo earum impedit corrupti temporibus facilis. Optio quidem excepturi est sariosam laborum ad alias officiis ipsum odit atque earum obcaecati, commodi dignissimos iste sunt saepe. Repellat consequuntur culpa expedita exercitationem est nesciunt beatae totam!</p>
+    </div>
+    <script>
+        window.addEventListener('scroll',function(){
+            let navbar = document.getElementById("menubar");
+
+            if(window.pageYOffset >=94){
+               navbar.classList.add('sticky');
+            }
+            else{
+                navbar.classList.remove('sticky');
+            }
+        })
+    </script>
+</body>
+</html>
